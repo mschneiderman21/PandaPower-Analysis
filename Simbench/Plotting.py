@@ -1,20 +1,7 @@
-import pandapower as pp
 import pandapower.plotting as plot
+import pandapower as pp
 import matplotlib.pyplot as plt
-import simbench as sb
-##1-MV-rural--0-sw
 
-def main():
-    sb_code = "1-MVLV-semiurb-3.202-1-no_sw" ##What network to use
-    net = sb.get_simbench_net(sb_code)
-    load = 14 ##index of what load to be changed
-    file = f"{sb_code}_load_{load}"
-    with open(file, "w") as file:
-        scaled = False
-        graphing(load, net, scaled, file)
-        scaled = True
-        graphing(load, net, scaled, file)
-        plt.show()
 def graphing(index, net, scaled, file):
 
     ##adjust load
@@ -68,6 +55,3 @@ def graphing(index, net, scaled, file):
     else:
         plt.title("Load " + str(index) + " Baseline at Bus " + str(net.load.loc[index, "bus"]))
         plt.savefig('Baseline')
-
-if __name__ == "__main__":
-    main()
