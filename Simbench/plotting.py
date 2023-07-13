@@ -3,10 +3,10 @@ import pandapower as pp
 import plotly.subplots as splt
 
 
-def plotting(index, net, scaled, file):
+def plotting(index, net, scaled, file, scale):
     ##adjust load
     if scaled:
-        net.load.loc[index, 'scaling'] = 1.2  ##scaled active power of the load
+        net.load.loc[index, 'scaling'] = scale  ##scaled active power of the load
     else:
         net.load.loc[index, 'scaling'] = 1  ##scaled active power of the load
 
@@ -30,14 +30,15 @@ def plotting(index, net, scaled, file):
 
 
 def combine_plots(fig1, fig2, net, index):
-    fig = splt.make_subplots(rows=1, cols=2)
-    fig1.update_layout(title="Load " + str(index) + " Scaled by 20% at Bus " + str(net.load.loc[index, "bus"]))
+    fig = splt.make_subplots(rows=1, cols=2, subplot_titles=("Load " + str(index) + " Baseline at " +
+                                                             str(net.bus.loc[net.load.loc[index, "bus"], 'name']),
+                                                             "Load " + str(index) + " Scaled by 20% at " +
+                                                             str(net.bus.loc[net.load.loc[index, "bus"], 'name'])))
     for trace in fig1.data:
         fig.add_trace(trace, row=1, col=1)
-
-    fig2.update_layout(title="Load " + str(index) + " Baseline at Bus " + str(net.load.loc[index, "bus"]))
     for trace in fig2.data:
         fig.add_trace(trace, row=1, col=2)
+
     fig = set_notations(fig, net, index)
     fig.update_layout(showlegend=False)
     fig.show()
@@ -49,28 +50,31 @@ def set_notations(fig, net, index):
 
     bus = net.load.loc[index, 'bus']  ##Bus with scaled load attached to it
     subplot = ""
+    bus_list = net.bus.name
     for i in range(1, 3):
         bus_index = 0
-        for x, y in zip(x_coords, y_coords):
+        for x, y, name in zip(x_coords, y_coords, bus_list):
+            nameList = name.split()
+            busName = nameList[len(nameList) - 1]
             if bus_index == bus:
                 fig.add_annotation(
                     xref='x' + subplot,
-                    yref='y',
+                    yref='y' + subplot,
                     x=x,
                     y=y,
-                    text=str(bus_index),
+                    text=str(busName),
                     showarrow=False,
-                    font=dict(color='red', size=12)
+                    font=dict(color='red', size=14)
                 )
             else:
                 fig.add_annotation(
                     xref='x' + subplot,
-                    yref='y',
+                    yref='y' + subplot,
                     x=x,
                     y=y,
-                    text=str(bus_index),
+                    text=str(busName),
                     showarrow=False,
-                    font=dict(color='black', size=8)
+                    font=dict(color='black', size=10)
                 )
             bus_index += 1
         subplot = "2"

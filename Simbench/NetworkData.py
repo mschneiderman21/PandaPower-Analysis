@@ -1,9 +1,9 @@
-import pandapower.networks as nw
 import simbench as sb
 
-sb_code = "1-MVLV-semiurb-3.202-1-no_sw" ##What network to use
+sb_code = "1-MVLV-urban-5.303-0-sw" ##What network to use
 net = sb.get_simbench_net(sb_code)
 
-print(net.load.loc[261])
-print(net.bus.loc[394])
-print(net.bus_geodata.loc[394])
+print(net.load)
+
+
+print(net.load.loc[14, 'bus'])
