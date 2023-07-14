@@ -50,7 +50,7 @@ def main():
         pp.runopp(net, numba=False)
         file.write("\n\n Run OPP:")
 
-        ##Write Results to Output File
+        ##Write Data to Output File
         file.write('\n\nBus - result\n')
         file.write(str(net.res_bus))
 
