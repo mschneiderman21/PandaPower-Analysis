@@ -11,9 +11,9 @@ scaling                        1.0
 in_service                    True
 type                           NaN
 subnet                     LV5.303
-max_p_mw                       NaN
-min_q_mvar                     NaN
 min_p_mw                       NaN
+min_q_mvar                     NaN
+max_p_mw                       NaN
 max_q_mvar                     NaN
 profile                       H0-C
 voltLvl                          7
@@ -35,21 +35,21 @@ q_mvar                    0.001581
 const_z_percent                0.0
 const_i_percent                0.0
 sn_mva                    0.004301
-scaling                        1.2
+scaling                        2.0
 in_service                    True
 type                           NaN
 subnet                     LV5.303
-max_p_mw                       NaN
-min_q_mvar                     NaN
 min_p_mw                       NaN
+min_q_mvar                     NaN
+max_p_mw                       NaN
 max_q_mvar                     NaN
 profile                       H0-C
 voltLvl                          7
 Name: 14, dtype: object
 
 	Data
-vm_pu        0.992540
-va_degree   -3.639491
+vm_pu        0.992341
+va_degree   -3.656362
 p_mw         0.004000
 q_mvar       0.001581
 Name: 14, dtype: float64

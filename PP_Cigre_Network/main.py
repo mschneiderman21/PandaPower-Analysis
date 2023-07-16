@@ -13,7 +13,6 @@ def main():
     ## File Generation
     timestamp = int(time.time())
     file = f"Main_{timestamp}.txt"
-
     with open(file, "w") as file:
         ## Label the switches from bus 0 to each feeder
         net.switch.loc[6, 'name'] = 'F1'

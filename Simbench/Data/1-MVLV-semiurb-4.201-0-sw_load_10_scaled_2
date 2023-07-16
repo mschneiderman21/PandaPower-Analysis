@@ -1,0 +1,55 @@
+Unscaled Power Flow Data
+	Load 10:
+name               LV4.201 Load 19
+bus                              7
+p_mw                         0.004
+q_mvar                    0.001581
+const_z_percent                0.0
+const_i_percent                0.0
+sn_mva                    0.004301
+scaling                        1.0
+in_service                    True
+type                           NaN
+max_q_mvar                     NaN
+max_p_mw                       NaN
+subnet                     LV4.201
+profile                       H0-G
+min_q_mvar                     NaN
+voltLvl                          7
+min_p_mw                       NaN
+Name: 10, dtype: object
+
+	Data
+vm_pu        0.965136
+va_degree   -2.569018
+p_mw         0.006000
+q_mvar       0.002371
+Name: 10, dtype: float64
+
+Scaled Power Flow Data
+	Load 10:
+name               LV4.201 Load 19
+bus                              7
+p_mw                         0.008
+q_mvar                    0.001581
+const_z_percent                0.0
+const_i_percent                0.0
+sn_mva                    0.004301
+scaling                        1.0
+in_service                    True
+type                           NaN
+max_q_mvar                     NaN
+max_p_mw                       NaN
+subnet                     LV4.201
+profile                       H0-G
+min_q_mvar                     NaN
+voltLvl                          7
+min_p_mw                       NaN
+Name: 10, dtype: object
+
+	Data
+vm_pu        0.964885
+va_degree   -2.606803
+p_mw         0.006000
+q_mvar       0.002371
+Name: 10, dtype: float64

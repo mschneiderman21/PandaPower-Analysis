@@ -6,9 +6,7 @@ import plotly.subplots as splt
 def plotting(index, net, scaled, file, scale):
     ##adjust load
     if scaled:
-        net.load.loc[index, 'scaling'] = scale  ##scaled active power of the load
-    else:
-        net.load.loc[index, 'scaling'] = 1  ##scaled active power of the load
+        net.load.loc[index, 'p_mw'] = net.load.loc[index, 'p_mw'] * scale  ##scaled active power of the load
 
     ##Run power flow and save results to a file
     pp.runpp(net, numba=False)
@@ -28,28 +26,29 @@ def plotting(index, net, scaled, file, scale):
     fig = pf_res_plotly(net, auto_open=False)
     return fig
 
+    """
+            Creates a figure with two sublots and adds the traces of the original 
+            figues.
 
-    """
-        Creates a figure with two sublots and adds the traces of the original 
-        figues.
-    
-    """
-def combine_plots(fig1, fig2, net, index):
+        """
+def combine_plots(fig1, fig2, net, index, scale, labels):
     fig = splt.make_subplots(rows=1, cols=2, subplot_titles=("Load " + str(index) + " Baseline at " +
                                                              str(net.bus.loc[net.load.loc[index, "bus"], 'name']),
-                                                             "Load " + str(index) + " Scaled by 20% at " +
+                                                             "Load " + str(index) + " Scaled by " + str(scale) +" at " +
                                                              str(net.bus.loc[net.load.loc[index, "bus"], 'name'])))
     for trace in fig1.data:
         fig.add_trace(trace, row=1, col=1)
     for trace in fig2.data:
         fig.add_trace(trace, row=1, col=2)
 
-    fig = set_notations(fig, net, index)
+    fig = set_notations(fig=fig, net=net, index=index, labels=labels)
     fig.update_layout(showlegend=False)
+    fig.update_xaxes(showticklabels=False)
+    fig.update_yaxes(showticklabels=False)
     return fig
 
 """Adds the bus numbers on each node"""
-def set_notations(fig, net, index):
+def set_notations(fig, net, index, labels):
     x_coords = net.bus_geodata.x
     y_coords = net.bus_geodata.y
 
@@ -69,7 +68,8 @@ def set_notations(fig, net, index):
                     y=y,
                     text=str(busName),
                     showarrow=False,
-                    font=dict(color='red', size=14)
+                    font=dict(color='red', size=14),
+                    visible=labels
                 )
             else:
                 fig.add_annotation(
@@ -79,7 +79,8 @@ def set_notations(fig, net, index):
                     y=y,
                     text=str(busName),
                     showarrow=False,
-                    font=dict(color='black', size=10)
+                    font=dict(color='black', size=10),
+                    visible=labels
                 )
             bus_index += 1
         subplot = "2" #Used to annotate the second plot

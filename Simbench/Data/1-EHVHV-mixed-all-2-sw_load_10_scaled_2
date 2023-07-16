@@ -1,0 +1,55 @@
+Unscaled Power Flow Data
+	Load 10:
+name               EHV Load 11
+bus                       1690
+p_mw                   123.817
+q_mvar                    40.7
+const_z_percent            0.0
+const_i_percent            0.0
+sn_mva                 130.335
+scaling                    1.0
+in_service                True
+type                       NaN
+min_q_mvar                 NaN
+voltLvl                      1
+profile                    HS0
+min_p_mw                   NaN
+max_p_mw                   NaN
+max_q_mvar                 NaN
+subnet                    EHV1
+Name: 10, dtype: object
+
+	Data
+vm_pu         1.088959
+va_degree    17.088433
+p_mw         92.756200
+q_mvar       30.490000
+Name: 10, dtype: float64
+
+Scaled Power Flow Data
+	Load 10:
+name               EHV Load 11
+bus                       1690
+p_mw                   123.817
+q_mvar                    40.7
+const_z_percent            0.0
+const_i_percent            0.0
+sn_mva                 130.335
+scaling                    2.0
+in_service                True
+type                       NaN
+min_q_mvar                 NaN
+voltLvl                      1
+profile                    HS0
+min_p_mw                   NaN
+max_p_mw                   NaN
+max_q_mvar                 NaN
+subnet                    EHV1
+Name: 10, dtype: object
+
+	Data
+vm_pu         1.088972
+va_degree    17.066028
+p_mw         92.756200
+q_mvar       30.490000
+Name: 10, dtype: float64

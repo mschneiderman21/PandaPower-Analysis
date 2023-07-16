@@ -1,0 +1,55 @@
+Unscaled Power Flow Data
+	Load 10:
+name               HV2 Load 11
+bus                         75
+p_mw                    1.1061
+q_mvar                   0.393
+const_z_percent            0.0
+const_i_percent            0.0
+sn_mva                   1.174
+scaling                    1.0
+in_service                True
+type                       NaN
+max_q_mvar                 NaN
+subnet                     HV2
+min_p_mw                   NaN
+voltLvl                      3
+max_p_mw                   NaN
+min_q_mvar                 NaN
+profile                mv_add1
+Name: 10, dtype: object
+
+	Data
+vm_pu        1.053120
+va_degree    4.313531
+p_mw         0.000000
+q_mvar       0.000000
+Name: 10, dtype: float64
+
+Scaled Power Flow Data
+	Load 10:
+name               HV2 Load 11
+bus                         75
+p_mw                    1.1061
+q_mvar                   0.393
+const_z_percent            0.0
+const_i_percent            0.0
+sn_mva                   1.174
+scaling                    2.0
+in_service                True
+type                       NaN
+max_q_mvar                 NaN
+subnet                     HV2
+min_p_mw                   NaN
+voltLvl                      3
+max_p_mw                   NaN
+min_q_mvar                 NaN
+profile                mv_add1
+Name: 10, dtype: object
+
+	Data
+vm_pu        1.053089
+va_degree    4.306403
+p_mw         0.000000
+q_mvar       0.000000
+Name: 10, dtype: float64

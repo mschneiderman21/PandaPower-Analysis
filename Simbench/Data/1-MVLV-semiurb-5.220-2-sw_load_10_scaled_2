@@ -1,0 +1,55 @@
+Unscaled Power Flow Data
+	Load 10:
+name                  MV2.101 Load 11
+bus                                13
+p_mw                           0.3373
+q_mvar                          0.134
+const_z_percent                   0.0
+const_i_percent                   0.0
+sn_mva                         0.3629
+scaling                           1.0
+in_service                       True
+type                              NaN
+voltLvl                             5
+min_p_mw                          NaN
+min_q_mvar                        NaN
+profile                   lv_semiurb4
+subnet             MV2.101_LV4.204_eq
+max_p_mw                          NaN
+max_q_mvar                        NaN
+Name: 10, dtype: object
+
+	Data
+vm_pu        0.989795
+va_degree    6.362776
+p_mw        -1.699300
+q_mvar       0.130300
+Name: 10, dtype: float64
+
+Scaled Power Flow Data
+	Load 10:
+name                  MV2.101 Load 11
+bus                                13
+p_mw                           0.6746
+q_mvar                          0.134
+const_z_percent                   0.0
+const_i_percent                   0.0
+sn_mva                         0.3629
+scaling                           1.0
+in_service                       True
+type                              NaN
+voltLvl                             5
+min_p_mw                          NaN
+min_q_mvar                        NaN
+profile                   lv_semiurb4
+subnet             MV2.101_LV4.204_eq
+max_p_mw                          NaN
+max_q_mvar                        NaN
+Name: 10, dtype: object
+
+	Data
+vm_pu        0.988760
+va_degree    6.302896
+p_mw        -1.699300
+q_mvar       0.130300
+Name: 10, dtype: float64
