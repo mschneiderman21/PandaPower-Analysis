@@ -10,13 +10,13 @@ sn_mva                         0.3629
 scaling                           1.0
 in_service                       True
 type                              NaN
-voltLvl                             5
+min_p_mw                          NaN
 max_p_mw                          NaN
+subnet             MV2.101_LV4.204_eq
+voltLvl                             5
+max_q_mvar                        NaN
 min_q_mvar                        NaN
 profile                   lv_semiurb4
-max_q_mvar                        NaN
-subnet             MV2.101_LV4.204_eq
-min_p_mw                          NaN
 Name: 10, dtype: object
 
 	Data
@@ -38,13 +38,13 @@ sn_mva                         0.3629
 scaling                           1.0
 in_service                       True
 type                              NaN
-voltLvl                             5
+min_p_mw                          NaN
 max_p_mw                          NaN
+subnet             MV2.101_LV4.204_eq
+voltLvl                             5
+max_q_mvar                        NaN
 min_q_mvar                        NaN
 profile                   lv_semiurb4
-max_q_mvar                        NaN
-subnet             MV2.101_LV4.204_eq
-min_p_mw                          NaN
 Name: 10, dtype: object
 
 	Data
