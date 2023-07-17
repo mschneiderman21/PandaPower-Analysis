@@ -20,8 +20,8 @@ min_p_mw                          NaN
 Name: 10, dtype: object
 
 	Data
-vm_pu        0.989795
-va_degree    6.362776
+vm_pu        0.989723
+va_degree    6.365061
 p_mw        -1.699300
 q_mvar       0.130300
 Name: 10, dtype: float64
@@ -48,8 +48,8 @@ min_p_mw                          NaN
 Name: 10, dtype: object
 
 	Data
-vm_pu        0.988760
-va_degree    6.302896
+vm_pu        0.988687
+va_degree    6.305184
 p_mw        -1.699300
 q_mvar       0.130300
 Name: 10, dtype: float64

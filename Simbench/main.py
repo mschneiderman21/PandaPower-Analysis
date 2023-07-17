@@ -5,10 +5,10 @@ import plotly as plt
 
 
 
-sb_code = ["1-MVLV-semiurb-5.220-2-sw"] ##    Networks to use
+sb_code = ["1-MVLV-semiurb-5.220-2-sw", "1-MVLV-semiurb-3.202-2-sw"] ##    Networks to use
 load = 10                           ##    Index of load to be scale
 scale = 2                           ##    Amount to scale the p_mw of the load
-labels = True                       ##    Show the bus labels
+labels = False                       ##    Show the bus labels
 figures = []
 for i in range(len(sb_code)):
     net = sb.get_simbench_net(sb_code[i])

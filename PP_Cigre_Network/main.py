@@ -13,7 +13,7 @@ def main():
     ## File Generation
     timestamp = int(time.time())
     file = f"Main_{timestamp}.txt"
-    with open(file, "w") as file:
+    with open("Data/" + file, "w") as file:
         ## Label the switches from bus 0 to each feeder
         net.switch.loc[6, 'name'] = 'F1'
         net.switch.loc[7, 'name'] = 'F2'
@@ -32,7 +32,7 @@ def main():
         net.switch.loc[7, 'closed'] = True ##F2
 
         #Bus Control
-        net.bus.loc[0, 'vn_kv'] = 110.0  ##rated voltage of the bus
+        net.bus.loc[0, 'vn_kv'] = 100.0  ##rated voltage of the bus
         net.bus.loc[0, 'in_service'] = True  ##In services
 
         ##Line Control
