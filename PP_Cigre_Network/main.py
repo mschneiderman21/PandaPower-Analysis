@@ -160,10 +160,10 @@ def graphing(index, net, scaled):
     if scaled:
         ##Title
         plt.title("Load " + str(index) + " Scaled by 20% at Bus " + str(net.load.loc[index, "bus"]))
-        plt.savefig('Scaled')
+        plt.savefig(f'Figures/Scaled_{int(time.time())}')
     else:
         plt.title("Load " + str(index) + " Baseline at Bus " + str(net.load.loc[index, "bus"]))
-        plt.savefig('Baseline')
+        plt.savefig(f'Figures/Baseline_{int(time.time())}')
 
 if __name__ == "__main__":
     main()

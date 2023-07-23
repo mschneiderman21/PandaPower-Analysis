@@ -1,6 +1,7 @@
 from pandapower.plotting.plotly import pf_res_plotly
 import pandapower as pp
 import plotly.subplots as splt
+import os
 
 
 def plotting(index, net, scaled, file, scale):
@@ -24,6 +25,7 @@ def plotting(index, net, scaled, file, scale):
         file.write(str(net.res_bus.loc[index]))
 
     fig = pf_res_plotly(net, auto_open=False)
+    os.remove("temp-plot.html")
     return fig
 
     """
